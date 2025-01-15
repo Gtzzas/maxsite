@@ -9,14 +9,17 @@
             background-color: red;
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 0;
         }
 
         .container {
             text-align: center;
+            margin-top: 30px; /* Distância do topo */
         }
 
         .button {
@@ -42,7 +45,7 @@
 <body>
 
     <div class="container">
-        <h1 style="color: white;">Site Do Max</h1>
+        <h1 style="color: white; margin-bottom: 30px;">Site Do Max</h1> <!-- Título mais alto -->
         <button class="button" onclick="window.location.href='https://www.exemplo1.com';">Ir para Exemplo 1</button>
         <button class="button" onclick="window.location.href='https://www.exemplo2.com';">Ir para Exemplo 2</button>
     </div>
