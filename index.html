@@ -1,56 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Sitezao Básico</title>
+    <title>Página com Botões</title>
     <style>
         body {
+            background-color: red;
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            background-color: #ffffff;
         }
-        header {
-            background-color: #FF0000;
-            color: white;
-            padding: 1rem;
+
+        .container {
             text-align: center;
         }
-        main {
-            padding: 2rem;
-            text-align: center;
+
+        .button {
+            background-color: white;
+            color: red;
+            border: 2px solid white;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
-        footer {
-            background-color: #333;
+
+        .button:hover {
+            background-color: red;
             color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Site do Max</h1>
-        <p>Este é um exemplo básico de site em HTML e CSS.</p>
-    </header>
-    <main>
-        <h2>Conteúdo Principal</h2>
-        <p>Aqui você pode adicionar informações, imagens, ou qualquer outro conteúdo que desejar.</p>
-        <button onclick="alert('Olá! Obrigado por visitar.')">Clique aqui</button>
-    </main>
-    <footer>
-        <p>Desenvolvido por [Seu Nome] - <a href="https://www.seusite.com" target="_blank">Meu Portfólio</a></p>
-    </footer>
+
+    <div class="container">
+        <h1 style="color: white;">Clique nos Botões</h1>
+        <button class="button" onclick="window.location.href='https://www.exemplo1.com';">Ir para Exemplo 1</button>
+        <button class="button" onclick="window.location.href='https://www.exemplo2.com';">Ir para Exemplo 2</button>
+    </div>
+
 </body>
-  </html>
+</html>
