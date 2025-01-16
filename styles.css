@@ -11,8 +11,7 @@ body {
 
 h1 {
     margin: 0;
-    padding: 20px 0;
-    border: 4px solid black;
+    padding: 20px 0 #f1c27d;
     color: white;
     font-size: 78px;
 }
