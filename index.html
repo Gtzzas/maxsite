@@ -25,10 +25,10 @@
 
         .container {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-grow: 1; /* Garante que a seção ocupa o restante do espaço */
+            justify-content: center; /* Centraliza os botões horizontalmente */
+            align-items: center; /* Centraliza os botões verticalmente */
+            flex-grow: 1; /* Garante que a seção ocupa o espaço restante */
+            gap: 20px; /* Espaçamento entre os botões */
         }
 
         .button {
@@ -36,7 +36,6 @@
             color: black;
             border: 2px solid white;
             padding: 15px 30px;
-            margin: 10px;
             font-size: 18px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s, transform 0.3s;
