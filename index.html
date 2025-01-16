@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Botões</title>
+    <style>
+        body {
+            background-color: red;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 30px; /* Distância do topo */
+        }
+
+        .button {
+            background-color: white;
+            color: red;
+            border: 2px solid white;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            border-radius: 50px; /* Bordas mais arredondadas */
+            font-weight: bold;  /* Deixa o texto mais destacado */
+        }
+
+        .button:hover {
+            background-color: red;
+            color: white;
+            transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="color: white; margin-bottom: 30px;">Site Do Max!!!!!</h1> <!-- Título mais alto -->
+        <button class="button" onclick="window.location.href='https://www.exemplo1.com';">Ir para Exemplo 1</button>
+        <button class="button" onclick="window.location.href='https://www.exemplo2.com';">Ir para Exemplo 2</button>
+    </div>
+
+</body>
+</html>
