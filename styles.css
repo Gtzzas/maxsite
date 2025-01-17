@@ -1,15 +1,16 @@
-/* Configurações básicas do body */
+/* Estilização do corpo da página */
 body {
-    background-color: red; /* Fundo vermelho */
+    background-color: red; /* Cor de fundo vermelha */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh; /* Altura total da tela */
+    justify-content: center;
+    height: 100vh; /* Ocupa a altura total da tela */
+    overflow: hidden; /* Remove as barras de rolagem */
     position: relative;
-    overflow: hidden; /* Impede barras de rolagem */
 }
 
 /* Contêiner das linhas animadas */
@@ -19,37 +20,38 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Linhas no fundo */
-    pointer-events: none; /* Evita interação com as linhas */
+    z-index: 0; /* Coloca as linhas atrás do conteúdo principal */
+    pointer-events: none; /* Impede a interação com as linhas */
 }
 
 /* Estilo das linhas */
 .line {
     position: absolute;
-    width: 100%;
+    width: 150%; /* Largura maior para cobrir a diagonal */
     height: 9px; /* Espessura das linhas */
     background-color: white; /* Cor das linhas */
     border-radius: 40px;
-    animation: moveLine 2s linear infinite; /* Animação das linhas */
+    animation: moveLineDiagonal 3s linear infinite; /* Animação contínua das linhas */
+    animation-fill-mode: forwards; /* Garante que a animação seja mantida após o fim */
 }
 
-/* Animação das linhas */
-@keyframes moveLine {
+/* Animação das linhas na diagonal */
+@keyframes moveLineDiagonal {
     0% {
-        transform: translateX(-100%); /* Começa fora da tela à esquerda */
+        transform: translate(-100%, -100%) rotate(45deg); /* Início fora da tela no canto superior esquerdo */
     }
     100% {
-        transform: translateX(100%); /* Move até fora da tela à direita */
+        transform: translate(100%, 100%) rotate(45deg); /* Fim fora da tela no canto inferior direito */
     }
 }
 
 /* Estilo do título */
 h1 {
     margin: 0;
-    padding: 20px 0;
+    padding: 10px 0;
     color: white;
-    font-size: 78px;
-    z-index: 2; /* Garante que o título fique acima das linhas */
+    font-size: 48px;
+    z-index: 1; /* Coloca o título acima das linhas */
     position: relative;
 }
 
@@ -57,20 +59,18 @@ h1 {
 .container {
     display: flex;
     justify-content: center; /* Centraliza os botões horizontalmente */
-    align-items: center; /* Centraliza os botões verticalmente */
-    flex-grow: 1; /* Ocupa o espaço restante */
     gap: 20px; /* Espaçamento entre os botões */
-    z-index: 2; /* Garante que os botões fiquem acima das linhas */
+    z-index: 1; /* Coloca os botões acima das linhas */
     position: relative;
 }
 
-/* Botões */
+/* Estilo dos botões */
 .button {
     background-color: white;
     color: black;
     border: 2px solid black;
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     border-radius: 50px;
@@ -80,5 +80,5 @@ h1 {
 .button:hover {
     background-color: blue;
     color: white;
-    transform: scale(1.1); /* Efeito de aumento no hover */
+    transform: scale(1.1);
 }
