@@ -1,12 +1,26 @@
-/* Configurações para o fundo das linhas */
+/* Configurações básicas do body */
+body {
+    background-color: red; /* Fundo vermelho */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Altura total da tela */
+    position: relative;
+    overflow: hidden; /* Impede barras de rolagem */
+}
+
+/* Contêiner das linhas animadas */
 #lines-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* As linhas ficam no fundo */
-    pointer-events: none; /* Impede interação com as linhas */
+    z-index: 0; /* Linhas no fundo */
+    pointer-events: none; /* Evita interação com as linhas */
 }
 
 /* Estilo das linhas */
@@ -29,7 +43,7 @@
     }
 }
 
-/* Configuração do título */
+/* Estilo do título */
 h1 {
     margin: 0;
     padding: 20px 0;
@@ -39,17 +53,18 @@ h1 {
     position: relative;
 }
 
-/* Configuração dos botões */
+/* Contêiner dos botões */
 .container {
     display: flex;
     justify-content: center; /* Centraliza os botões horizontalmente */
     align-items: center; /* Centraliza os botões verticalmente */
-    flex-grow: 1; /* Garante que a seção ocupa o espaço restante */
+    flex-grow: 1; /* Ocupa o espaço restante */
     gap: 20px; /* Espaçamento entre os botões */
     z-index: 2; /* Garante que os botões fiquem acima das linhas */
     position: relative;
 }
 
+/* Botões */
 .button {
     background-color: white;
     color: black;
@@ -65,5 +80,5 @@ h1 {
 .button:hover {
     background-color: blue;
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efeito de aumento no hover */
 }
