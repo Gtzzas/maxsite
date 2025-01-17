@@ -27,21 +27,22 @@ body {
 /* Estilo das linhas */
 .line {
     position: absolute;
-    width: 150%; /* Largura maior para cobrir a diagonal */
+    width: 100%; /* Largura total para cobrir toda a tela */
     height: 9px; /* Espessura das linhas */
     background-color: white; /* Cor das linhas */
     border-radius: 40px;
-    animation: moveLineDiagonal 3s linear infinite; /* Animação contínua das linhas */
+    animation: moveLineHorizontal 3s linear infinite; /* Animação contínua das linhas */
     animation-fill-mode: forwards; /* Garante que a animação seja mantida após o fim */
+    animation-delay: 0s; /* A animação começa imediatamente */
 }
 
-/* Animação das linhas na diagonal */
-@keyframes moveLineDiagonal {
+/* Animação das linhas movendo-se horizontalmente */
+@keyframes moveLineHorizontal {
     0% {
-        transform: translate(-100%, -100%) rotate(45deg); /* Início fora da tela no canto superior esquerdo */
+        transform: translateX(-100%); /* Começa fora da tela à esquerda */
     }
     100% {
-        transform: translate(100%, 100%) rotate(45deg); /* Fim fora da tela no canto inferior direito */
+        transform: translateX(100%); /* Move até fora da tela à direita */
     }
 }
 
