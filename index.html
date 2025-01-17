@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página com Botões</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula o arquivo CSS -->
 </head>
 <body>
+    <!-- Contêiner para as linhas animadas -->
+    <div id="lines-container">
+        <div class="line" style="top: 20%; animation-delay: 0s;"></div>
+        <div class="line" style="top: 40%; animation-delay: 1s;"></div>
+        <div class="line" style="top: 60%; animation-delay: 2s;"></div>
+        <div class="line" style="top: 80%; animation-delay: 3s;"></div>
+    </div>
+
+    <!-- Conteúdo principal -->
     <h1>Max</h1> <!-- Título fixado no topo -->
     <div class="container">
         <button class="button" onclick="window.location.href='https://www.exemplo1.com';">Adicionar</button>
         <button class="button" onclick="window.location.href='https://www.exemplo2.com';">Suporte</button>
     </div>
-    <div class="line" style="top: 20%; animation-delay: 0s;"></div>
-<div class="line" style="top: 40%; animation-delay: 1s;"></div>
-<div class="line" style="top: 60%; animation-delay: 2s;"></div>
-<div class="line" style="top: 80%; animation-delay: 3s;"></div>
 </body>
 </html>

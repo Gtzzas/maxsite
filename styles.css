@@ -1,16 +1,15 @@
-body {
-    background-color: red; /* Fundo vermelho */
-    overflow: hidden; /* Impede barras de rolagem */
-    margin: 0;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh; /* Altura total da tela */
-    position: relative;
+/* Configurações para o fundo das linhas */
+#lines-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* As linhas ficam no fundo */
+    pointer-events: none; /* Impede interação com as linhas */
 }
 
+/* Estilo das linhas */
 .line {
     position: absolute;
     width: 100%;
@@ -30,19 +29,25 @@ body {
     }
 }
 
+/* Configuração do título */
 h1 {
     margin: 0;
     padding: 20px 0;
     color: white;
     font-size: 78px;
+    z-index: 2; /* Garante que o título fique acima das linhas */
+    position: relative;
 }
 
+/* Configuração dos botões */
 .container {
     display: flex;
     justify-content: center; /* Centraliza os botões horizontalmente */
     align-items: center; /* Centraliza os botões verticalmente */
     flex-grow: 1; /* Garante que a seção ocupa o espaço restante */
     gap: 20px; /* Espaçamento entre os botões */
+    z-index: 2; /* Garante que os botões fiquem acima das linhas */
+    position: relative;
 }
 
 .button {
