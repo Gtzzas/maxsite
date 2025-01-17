@@ -8,7 +8,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 height: 100vh;
-background: linear-gradient(to right, #833ab4, red, #fcb045);
+background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
 background-size: 400% 400%;
 animation: animate-background 10s infinite ease-i-out;
 }
@@ -18,12 +18,10 @@ animation: animate-background 10s infinite ease-i-out;
     background-position: 0 50%;
   }
 50%{
-
 background-position: 100% 50%;
    }
 
 100%{
-
 background-position: 0 50%;
 }
 }
