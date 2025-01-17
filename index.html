@@ -1,43 +1,16 @@
-body {
-    background-color: red;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-}
-
-h1 {
-    margin: 0;
-    padding: 20px 0;
-    color: white;
-    font-size: 78px;
-}
-
-.container {
-    display: flex;
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    align-items: center; /* Centraliza os botões verticalmente */
-    flex-grow: 1; /* Garante que a seção ocupa o espaço restante */
-    gap: 20px; /* Espaçamento entre os botões */
-}
-
-.button {
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    border-radius: 50px;
-    font-weight: bold;
-}
-
-.button:hover {
-    background-color: blue;
-    color: white;
-    transform: scale(1.1);
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Botões</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+    <h1>Max</h1> <!-- Título fixado no topo -->
+    <div class="container">
+        <button class="button" onclick="window.location.href='https://www.exemplo1.com';">Adicionar</button>
+        <button class="button" onclick="window.location.href='https://www.exemplo2.com';">Suporte</button>
+    </div>
+</body>
+</html>

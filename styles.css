@@ -1,32 +1,35 @@
-/* Estilização do corpo da página */
 body {
-  
+    background-color: red;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Estilo do título */
 h1 {
     margin: 0;
-    padding: 10px 0;
+    padding: 20px 0;
     color: white;
-    font-size: 48px;
-    position: relative;
+    font-size: 78px;
 }
 
-/* Contêiner dos botões */
 .container {
     display: flex;
     justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+    flex-grow: 1; /* Garante que a seção ocupa o espaço restante */
     gap: 20px; /* Espaçamento entre os botões */
-    position: relative;
 }
 
-/* Estilo dos botões */
 .button {
     background-color: white;
     color: black;
-    border: 2px solid black;
-    padding: 10px 20px;
-    font-size: 16px;
+    border: 2px solid white;
+    padding: 15px 30px;
+    font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     border-radius: 50px;
