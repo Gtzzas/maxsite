@@ -2,6 +2,11 @@ body {
     background-color: red; /* Fundo vermelho */
     overflow: hidden; /* Impede barras de rolagem */
     margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh; /* Altura total da tela */
     position: relative;
 }
