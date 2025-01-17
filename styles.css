@@ -1,84 +1,12 @@
-/* Configurações básicas do body */
-body {
-    background-color: red; /* Fundo vermelho */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh; /* Altura total da tela */
-    position: relative;
-    overflow: hidden; /* Impede barras de rolagem */
-}
-
-/* Contêiner das linhas animadas */
-#lines-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Linhas no fundo */
-    pointer-events: none; /* Evita interação com as linhas */
-}
-
-/* Estilo das linhas */
-.line {
-    position: absolute;
-    width: 100%;
-    height: 9px; /* Espessura das linhas */
-    background-color: white; /* Cor das linhas */
-    border-radius: 40px;
-    animation: moveLine 2s linear infinite; /* Animação das linhas */
-}
-
-/* Animação das linhas */
-@keyframes moveLine {
-    0% {
-        transform: translateX(-100%); /* Começa fora da tela à esquerda */
-    }
-    100% {
-        transform: translateX(100%); /* Move até fora da tela à direita */
-    }
-}
-
-/* Estilo do título */
-h1 {
-    margin: 0;
-    padding: 20px 0;
-    color: white;
-    font-size: 78px;
-    z-index: 2; /* Garante que o título fique acima das linhas */
-    position: relative;
-}
-
-/* Contêiner dos botões */
-.container {
-    display: flex;
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    align-items: center; /* Centraliza os botões verticalmente */
-    flex-grow: 1; /* Ocupa o espaço restante */
-    gap: 20px; /* Espaçamento entre os botões */
-    z-index: 2; /* Garante que os botões fiquem acima das linhas */
-    position: relative;
-}
-
-/* Botões */
-.button {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    border-radius: 50px;
-    font-weight: bold;
-}
-
-.button:hover {
-    background-color: blue;
-    color: white;
-    transform: scale(1.1); /* Efeito de aumento no hover */
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Botões</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+</head>
+<body>
+    <!-- Contêiner para as linhas animadas -->
+    <div id="lines-container">
+        <div class="line" style="top: 20%; animation-delay: 0s
