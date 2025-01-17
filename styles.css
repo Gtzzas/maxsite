@@ -9,8 +9,9 @@ body {
 .line {
     position: absolute;
     width: 100%;
-    height: 6px; /* Espessura das linhas */
+    height: 9px; /* Espessura das linhas */
     background-color: white; /* Cor das linhas */
+    border-radius: 40px;
     animation: moveLine 2s linear infinite; /* Animação das linhas */
 }
 
