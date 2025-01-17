@@ -1,12 +1,84 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Botões</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
-</head>
-<body>
-    <!-- Contêiner para as linhas animadas -->
-    <div id="lines-container">
-        <div class="line" style="top: 20%; animation-delay: 0s
+/* Configurações básicas do body */
+body {
+    background-color: red; /* Fundo vermelho */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+    font-family: Arial, sans-serif; /* Fonte global */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Garante que a altura ocupe apenas a janela */
+    overflow: hidden; /* Remove barras de rolagem */
+    position: relative; /* Necessário para as linhas animadas */
+}
+
+/* Contêiner das linhas animadas */
+#lines-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Linhas ocupam toda a largura */
+    height: 100%; /* Linhas ocupam toda a altura */
+    z-index: 0; /* Ficam no fundo */
+    pointer-events: none; /* Evita interação com as linhas */
+}
+
+/* Estilo das linhas */
+.line {
+    position: absolute;
+    width: 100%;
+    height: 9px; /* Espessura das linhas */
+    background-color: white; /* Cor das linhas */
+    border-radius: 40px;
+    animation: moveLine 2s linear infinite; /* Animação das linhas */
+}
+
+/* Animação das linhas */
+@keyframes moveLine {
+    0% {
+        transform: translateX(-100%); /* Começa fora da tela à esquerda */
+    }
+    100% {
+        transform: translateX(100%); /* Move até fora da tela à direita */
+    }
+}
+
+/* Estilo do título */
+h1 {
+    margin: 0; /* Remove margens padrão */
+    padding: 10px 0; /* Espaçamento interno */
+    color: white;
+    font-size: 48px; /* Redimensiona o título */
+    z-index: 2; /* Fica acima das linhas */
+    position: relative;
+}
+
+/* Contêiner dos botões */
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+    z-index: 2; /* Fica acima das linhas */
+    position: relative;
+}
+
+/* Botões */
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px; /* Reduz o tamanho do botão */
+    font-size: 16px; /* Ajusta o tamanho do texto */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 50px; /* Bordas arredondadas */
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.1); /* Efeito de aumento no hover */
+}
