@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Ocupa a altura total da tela */
-    background: linear-gradient(90deg, #b30000, yellow, blue); /* Degradê vermelho forte */
+    background: linear-gradient(90deg, #b30000, yellow, red); /* Degradê vermelho forte */
     background-size: 300% 100%; /* Maior área para o gradiente, criando um efeito mais forte */
     animation: gradientAnimation 5s linear infinite; /* Animação do gradiente da esquerda para a direita */
 }
