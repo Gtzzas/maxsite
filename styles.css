@@ -25,7 +25,8 @@ h1 {
   
 }
 .desc {
-  font-size: 24px;
+  font-size: 20px;
+  background-color: red;
 }
 
 /* Contêiner dos botões */
