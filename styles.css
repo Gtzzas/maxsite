@@ -10,12 +10,14 @@ body {
     height: 100vh; /* Ocupa a altura total da tela */
     background: linear-gradient(to right, #b30000, #740B0C, black); /* Degradê vermelho forte */
     background-size: 300% 100%; /* Maior área para o gradiente, criando um efeito mais forte */
-    animation: gradientAnimation 8s  infinite ease-in-out; /* Animação do gradiente da esquerda para a direita */
+    animation: gradientAnimation 10s  infinite ease-in-out; /* Animação do gradiente da esquerda para a direita */
     background-position: 100% 50%; /* Garante que o gradiente comece no início */
 }
 
 /* Título */
 h1 {
+    position: absolute;
+    top: 0;
     margin: 0;
     padding: 20px 0;
     color: white;
