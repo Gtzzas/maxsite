@@ -24,6 +24,9 @@ h1 {
   
   
 }
+.desc {
+  font-size: 24px;
+}
 
 /* Contêiner dos botões */
 .container {
