@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Ocupa a altura total da tela */
-    background: linear-gradient(45deg, #ff4d4d, #ff0000); /* Gradiente de vermelho claro para vermelho forte */
+    background: linear-gradient(45deg, #ff0000, #000); /* Gradiente de vermelho claro para vermelho forte */
     background-size: 400% 400%; /* Para fazer o gradiente animado */
     animation: gradientAnimation 5s ease infinite; /* Animação do gradiente */
 }
